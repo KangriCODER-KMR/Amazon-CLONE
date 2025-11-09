@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+    </style>
+</head>
+<body>
+    <h1>Amazon Clone Quick Test</h1>
+    
+    <div class="test">
+        <h3>Test 1: Basic HTML</h3>
+        <p>✅ If you can see this, HTML is working</p>
+    </div>
+    
+    <div class="test">
+        <h3>Test 2: JavaScript Test</h3>
+        <p id="js-test">❌ JavaScript not working</p>
+    </div>
+    
+    <div class="test">
+        <h3>Test 3: Product Data Test</h3>
+        <div id="product-test"></div>
+    </div>
+    
+    <div class="test">
+        <h3>Test 4: Image Loading Test</h3>
+        <img src="https://picsum.photos/200/200?random=1" alt="Test Image" 
+             onload="document.getElementById('img-test').innerHTML='✅ Images loading properly'"
+             onerror="document.getElementById('img-test').innerHTML='❌ Images not loading'">
+        <p id="img-test">🔄 Testing image loading...</p>
+    </div>
+    
+    <script>
+        // Test JavaScript
+        document.getElementById('js-test').innerHTML = '✅ JavaScript is working';
+        
+        // Test if we can access the main script
+        try {
+            // Try to load product data (if available)
+            if (typeof products !== 'undefined') {
+                document.getElementById('product-test').innerHTML = 
+                    '✅ Products data loaded: ' + products.length + ' products found';
+            } else {
+                document.getElementById('product-test').innerHTML = 
+                    '❌ Products data not found - script.js might not be loaded';
+            }
+        } catch(e) {
+            document.getElementById('product-test').innerHTML = 
+                '❌ Error accessing products: ' + e.message;
+        }
+    </script>
+    
+    <!-- Try to load the main script -->
+    <script src="script.js"></script>
+    <script>
+        // Test again after loading script
+        setTimeout(() => {
+            if (typeof products !== 'undefined') {
+                document.getElementById('product-test').innerHTML = 
+                    '✅ Products data loaded: ' + products.length + ' products found';
+            }
+        }, 100);
+    </script>
+</body>
+</html>

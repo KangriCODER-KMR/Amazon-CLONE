@@ -1,0 +1,136 @@
+// COPY THIS ENTIRE SECTION - Replace your products array with this:
+
+const products = [
+    {
+        id: 1,
+        title: "Samsung Galaxy S24 Ultra Smartphone",
+        price: 89999,
+        originalPrice: 99999,
+        category: "electronics",
+        rating: 4.5,
+        reviewCount: 1250,
+        image: "https://picsum.photos/400/400?random=1",
+        description: "Latest Samsung Galaxy S24 Ultra with advanced camera system, S Pen support, and all-day battery life. Features a stunning 6.8-inch Dynamic AMOLED display."
+    },
+    {
+        id: 2,
+        title: "Apple iPhone 15 Pro Max",
+        price: 134900,
+        originalPrice: 139900,
+        category: "electronics",
+        rating: 4.8,
+        reviewCount: 2100,
+        image: "https://picsum.photos/400/400?random=2",
+        description: "The most advanced iPhone yet with titanium design, Action Button, and the powerful A17 Pro chip. Capture stunning photos with the Pro camera system."
+    },
+    {
+        id: 3,
+        title: "Sony WH-1000XM5 Wireless Headphones",
+        price: 24990,
+        originalPrice: 29990,
+        category: "electronics",
+        rating: 4.6,
+        reviewCount: 850,
+        image: "https://picsum.photos/400/400?random=3",
+        description: "Industry-leading noise cancellation with premium sound quality. 30-hour battery life and crystal clear hands-free calling."
+    },
+    {
+        id: 4,
+        title: "Nike Air Max 270 Running Shoes",
+        price: 8995,
+        originalPrice: 12995,
+        category: "clothing",
+        rating: 4.3,
+        reviewCount: 650,
+        image: "https://picsum.photos/400/400?random=4",
+        description: "Comfortable running shoes with Max Air unit for exceptional all-day comfort. Perfect for both casual wear and athletic activities."
+    },
+    {
+        id: 5,
+        title: "Levi's 501 Original Fit Jeans",
+        price: 3999,
+        originalPrice: 4999,
+        category: "clothing",
+        rating: 4.2,
+        reviewCount: 920,
+        image: "https://picsum.photos/400/400?random=5",
+        description: "Classic straight fit jeans with a timeless look. Made with premium denim for durability and comfort."
+    },
+    {
+        id: 6,
+        title: "The Psychology of Money by Morgan Housel",
+        price: 399,
+        originalPrice: 599,
+        category: "books",
+        rating: 4.7,
+        reviewCount: 1500,
+        image: "https://picsum.photos/400/400?random=6",
+        description: "Timeless lessons on wealth, greed, and happiness. Learn how psychology affects our financial decisions."
+    },
+    {
+        id: 7,
+        title: "Atomic Habits by James Clear",
+        price: 450,
+        originalPrice: 650,
+        category: "books",
+        rating: 4.9,
+        reviewCount: 2300,
+        image: "https://picsum.photos/400/400?random=7",
+        description: "An easy and proven way to build good habits and break bad ones. Transform your life with tiny changes."
+    },
+    {
+        id: 8,
+        title: "Instant Pot Duo 7-in-1 Electric Pressure Cooker",
+        price: 7999,
+        originalPrice: 9999,
+        category: "home",
+        rating: 4.4,
+        reviewCount: 1100,
+        image: "https://picsum.photos/400/400?random=8",
+        description: "7 appliances in 1: pressure cooker, slow cooker, rice cooker, steamer, sauté, yogurt maker, and warmer."
+    },
+    {
+        id: 9,
+        title: "Dyson V15 Detect Cordless Vacuum",
+        price: 47900,
+        originalPrice: 54900,
+        category: "home",
+        rating: 4.5,
+        reviewCount: 780,
+        image: "https://picsum.photos/400/400?random=9",
+        description: "Powerful cordless vacuum with laser dust detection and advanced filtration. Up to 60 minutes of run time."
+    },
+    {
+        id: 10,
+        title: "Adidas Ultraboost 22 Running Shoes",
+        price: 15999,
+        originalPrice: 17999,
+        category: "sports",
+        rating: 4.6,
+        reviewCount: 540,
+        image: "https://picsum.photos/400/400?random=10",
+        description: "Experience incredible energy return with BOOST midsole. Designed for long-distance running comfort."
+    },
+    {
+        id: 11,
+        title: "MacBook Pro 14-inch M3 Chip",
+        price: 169900,
+        originalPrice: 179900,
+        category: "electronics",
+        rating: 4.8,
+        reviewCount: 890,
+        image: "https://picsum.photos/400/400?random=11",
+        description: "Supercharged by M3 chip for incredible performance. Stunning Liquid Retina XDR display and all-day battery life."
+    },
+    {
+        id: 12,
+        title: "Ray-Ban Aviator Classic Sunglasses",
+        price: 12999,
+        originalPrice: 15999,
+        category: "clothing",
+        rating: 4.4,
+        reviewCount: 1200,
+        image: "https://picsum.photos/400/400?random=12",
+        description: "Iconic aviator style with crystal lenses and lightweight metal frame. 100% UV protection."
+    }
+];

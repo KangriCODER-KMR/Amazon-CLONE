@@ -1,0 +1,23 @@
+// FIND this section in your script.js (around line 158-162) and REPLACE it:
+
+// Initialize the application
+document.addEventListener('DOMContentLoaded', function() {
+    try {
+        console.log('Amazon Clone initializing...');
+        displayProducts(currentProducts);
+        updateCartCount();
+        setupEventListeners();
+        console.log('Amazon Clone initialized successfully!');
+    } catch (error) {
+        console.error('Error initializing Amazon Clone:', error);
+        // Show fallback content if initialization fails
+        if (productsGrid) {
+            productsGrid.innerHTML = `
+                <div style="grid-column: 1 / -1; text-align: center; padding: 40px; color: #666;">
+                    <h3>Unable to load products</h3>
+                    <p>Please refresh the page to try again.</p>
+                </div>
+            `;
+        }
+    }
+});

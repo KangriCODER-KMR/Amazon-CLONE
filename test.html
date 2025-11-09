@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Clone Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test-result { margin: 10px 0; padding: 10px; border-radius: 5px; }
+        .success { background-color: #d4edda; color: #155724; }
+        .error { background-color: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Amazon Clone Functionality Test</h1>
+    <div id="test-results"></div>
+    
+    <script>
+        const results = [];
+        
+        // Test 1: Check if main files exist
+        function testFilesExist() {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'styles.css';
+            link.onload = () => {
+                results.push({test: 'CSS File Loading', status: 'success', message: 'styles.css loaded successfully'});
+                displayResults();
+            };
+            link.onerror = () => {
+                results.push({test: 'CSS File Loading', status: 'error', message: 'styles.css failed to load'});
+                displayResults();
+            };
+            document.head.appendChild(link);
+            
+            const script = document.createElement('script');
+            script.src = 'script.js';
+            script.onload = () => {
+                results.push({test: 'JavaScript File Loading', status: 'success', message: 'script.js loaded successfully'});
+                displayResults();
+            };
+            script.onerror = () => {
+                results.push({test: 'JavaScript File Loading', status: 'error', message: 'script.js failed to load'});
+                displayResults();
+            };
+            document.head.appendChild(script);
+        }
+        
+        // Test 2: Check for FontAwesome
+        function testFontAwesome() {
+            const link = document.createElement('link');
+            link.rel = 'stylesheet';
+            link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css';
+            link.onload = () => {
+                results.push({test: 'FontAwesome Loading', status: 'success', message: 'FontAwesome loaded successfully'});
+                displayResults();
+            };
+            link.onerror = () => {
+                results.push({test: 'FontAwesome Loading', status: 'error', message: 'FontAwesome failed to load'});
+                displayResults();
+            };
+            document.head.appendChild(link);
+        }
+        
+        function displayResults() {
+            const container = document.getElementById('test-results');
+            container.innerHTML = results.map(result => `
+                <div class="test-result ${result.status}">
+                    <strong>${result.test}:</strong> ${result.message}
+                </div>
+            `).join('');
+        }
+        
+        // Run tests
+        window.addEventListener('load', () => {
+            testFilesExist();
+            testFontAwesome();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+/* ADD THESE STYLES AT THE END OF YOUR styles.css file (after line 700+): */
+
+/* Loading and Error States */
+.product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+    transform: translateX(-100%);
+    animation: shimmer 1.5s infinite;
+    z-index: 1;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.image-loaded::before {
+    display: none;
+}
+
+/* Better image transitions */
+.product-image img {
+    transition: transform 0.3s, opacity 0.3s ease !important;
+    background-color: #f0f0f0 !important;
+}
+
+/* Ensure proper grid layout */
+.products-grid {
+    min-height: 200px !important;
+}
+
+.products-grid:empty::after {
+    content: 'Loading products...';
+    display: block;
+    text-align: center;
+    color: #666;
+    font-size: 18px;
+    padding: 40px;
+    grid-column: 1 / -1;
+}
